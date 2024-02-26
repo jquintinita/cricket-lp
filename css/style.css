@@ -98,6 +98,9 @@ body{
         text-shadow: 0px 0px 5px #ff0000, 0px 0px 5px rgba(255, 0, 0, 0.822);
     }
 }
+@keyframes beat{
+	to { transform: scale(1.08); }
+}
 @keyframes levitate {
 	0% {
 		transform: translateY(calc(var(--topPostion)));
@@ -174,10 +177,14 @@ body{
 }
 
 @media screen and (max-width: 1024px) {
-    .rewards img{
+    .rewards img:not(:nth-child(3)){
         height: auto;
         width: 16vw;
     
+    }
+    .rewards img:nth-child(3){
+        height: auto;
+        width: 20vw;
     }
     .hero-text h1{
         font-size: 5.4vw;
@@ -241,6 +248,9 @@ body{
     .hero-text{
         bottom: -92%;
     }
+    .rewards{
+        gap: 5px
+    }
 }
 
 .reg-sec{
@@ -252,6 +262,7 @@ body{
     background-image: url(../images/sports-field.jpg);
     background-size: cover;
     background-position: center;
+
 }
 .flex-box{
     display: flex;
@@ -264,11 +275,42 @@ body{
 .flex-content{
     flex: 1;
 }
+.flex-image{
+    position: relative;
+    overflow: hidden;
+}
 .flex-image img{
     max-width: 100%;
     height: auto;
     margin: 0 auto;
     display: block;
+}
+
+.cricket-ball{
+    position: absolute;
+    right: 18%;
+    top: 40%;
+    display: block;
+    width:15vw;
+    max-width: 120px !important;
+}
+.cash-flying1{
+    position: absolute;
+    max-width: 210px !important;
+    width: 20vw;
+    height: auto;
+    left: 20%;
+    bottom: 0%;
+  
+}
+.cash-flying2{
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    top: 15%;
+    right: 0%;
+    max-width: 190px !important;
+
 }
 .steps-container{
     width: 100%;
@@ -396,8 +438,8 @@ body{
     position: absolute;
     z-index: -1;
     right: 0;
-    top: -130px;
-    MAX-width: 40%;
+    top: -180px;
+    MAX-width: 48%;
    }
    .steps-container {
         max-width: 500px;
@@ -433,8 +475,21 @@ body{
 @media screen and (max-width: 668px) {
    
     .flex-image{
-        top: -180px;
-        MAX-width: 70%;
+        top: -220px;
+        MAX-width: 62%;
+    }
+    .steps-container{
+        padding-left: 60px;
+    }
+    .steps-box{
+        margin-left: unset !important;
+    }
+}
+@media screen and (max-width: 468px) {
+   
+    .flex-image{
+        top: -160px;
+        MAX-width: 62%;
     }
     .steps-container{
         padding-left: 60px;
@@ -500,5 +555,18 @@ body{
     }
     .steps-container{
         gap: 40px;
+    }
+
+}
+
+@media screen and (max-width:320px) {
+    .video-title::before{
+        width: 20px;
+        left: -30px;
+    }
+   .video-title::after{
+        width: 20px;
+        right: -30px;
+        
     }
 }
