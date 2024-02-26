@@ -70,7 +70,7 @@ body{
 .hero-text{
     color: #fff;
     position: absolute;
-    bottom: -32%;
+    bottom: -22%;
     padding: 50px 0;
     left: 0;
     width: 100%;
@@ -130,7 +130,7 @@ body{
     margin-top: 20px;
     letter-spacing: 1px;
     transition: all 200ms linear;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
@@ -153,7 +153,7 @@ body{
 }
 
 .rewards img:first-child, .rewards img:last-child{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .rewards img:nth-child(2), .rewards img:nth-child(4){
     margin-top: 2%;
@@ -245,9 +245,9 @@ body{
 
 .reg-sec{
     position: relative;
-    margin: 320px 0 90px;
+    margin: 320px 0 30px;
     display: block;
-    height: 100vh;
+    height: auto;
     z-index: 99;
     background-image: url(../images/sports-field.jpg);
     background-size: cover;
@@ -267,6 +267,8 @@ body{
 .flex-image img{
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
+    display: block;
 }
 .steps-container{
     width: 100%;
@@ -281,14 +283,17 @@ body{
     border-style: solid;
     border-width: 1px;
     border-color: rgb(0, 255, 96);
-    background-image: -moz-linear-gradient( 90deg, rgb(51,124,88) 0%, rgba(84,199,114,0.99608) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(51,124,88) 0%, rgba(84,199,114,0.99608) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(51,124,88) 0%, rgba(84,199,114,0.99608) 100%);
+    background-image: -moz-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
+    background-image: -webkit-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
+    background-image: -ms-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
     padding: 30px 30px 30px 60px;
     color:#fff;
     transform: skew(-15deg);
     position: relative;
     max-width: 340px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 9px 20px 10px rgb(44 44 44 / 86%);
 }
 
 .steps-box > div{
@@ -347,6 +352,8 @@ body{
      background-color: rgb(41, 99, 61);
      color: #fff;
      outline: none;
+     font-size: 18px;
+     width: 100%;
 }
 .form-input input::placeholder{
     color: #fff;
@@ -355,9 +362,22 @@ body{
 .form-input input[type="submit"]{
     border: 1px solid rgb(219, 0, 0);
     background-color: rgb(219, 0, 0);
+    cursor: pointer;
 }
-
-
+.title-head{
+    position: relative;
+    max-width: max-content;
+}
+.title-head::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    background-color: rgb(219, 0, 0);
+    right: -60px;
+    top: 50%;
+}
 @media screen and (max-width: 1024px) {
      .reg-sec{
        
@@ -370,6 +390,7 @@ body{
    .flex-box > div{
      flex: 0 100%;
      z-index: 5;
+     width: 100%;
    }
    .flex-image{
     position: absolute;
@@ -422,9 +443,62 @@ body{
         margin-left: unset !important;
     }
 }
+
+.video-sec{
+    padding: 50px 0;
+    background-image: url(../images/sports-field.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.video-title{
+    position: relative;
+    max-width: max-content;
+    color: #fff;
+    margin: 0 auto;
+
+}
+.video-title::before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    background-color: rgb(219, 0, 0);
+    left: -60px;
+    top: 50%;
+}
+.video-title::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 6px;
+    background-color: rgb(219, 0, 0);
+    right: -60px;
+    top: 50%;
+}
+.video-container{
+    max-width: 720px;
+    width: 90%;
+    margin: 50px auto 20px;
+    display: block;
+}
+.video-container{
+   
+}
+
 @media screen and (max-width: 480px) {
     .steps-box{
         margin-left: unset !important;
         padding: 15px 17px 15px 60px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .step-copy{
+        font-size: 16px;
+    }
+    .steps-container{
+        gap: 40px;
     }
 }
