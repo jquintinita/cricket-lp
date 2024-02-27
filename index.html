@@ -92,19 +92,19 @@
                 }
             });
 
-           $("#submitReg").click(function(event){
-            event.preventDefault();
-                $.ajax({
-                    method: "post",
-                    url: "reg.php",
-                    data: $('#regForm').serialize(),
-                    dataType: "text",
-                    success: function(response){
-                        alert(response);
-                        resetform();
-                    }
-                });
-           });
+        //    $("#submitReg").click(function(event){
+        //     event.preventDefault();
+        //         $.ajax({
+        //             method: "post",
+        //             url: "reg.php",
+        //             data: $('#regForm').serialize(),
+        //             dataType: "text",
+        //             success: function(response){
+        //                 alert(response);
+        //                 resetform();
+        //             }
+        //         });
+        //    });
            function resetform(){
              $("#phone").val("");
              $("#fullname").val("");
