@@ -14,7 +14,19 @@ body{
     font-weight: 600;
     background-color: #050b07;
 }
-
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 10px 20px;
+    transition: all 200ms linear;
+}
+.fixed-header{
+    background-color: #050b07d0;
+    backdrop-filter: blur(10px);
+}
 .container{
     max-width: 1600px;
     margin: 0 auto;
@@ -23,10 +35,7 @@ body{
     position: relative;
 }
 .logo{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 999;
+  
 }
 .hero-section{
     position: relative;
@@ -569,4 +578,11 @@ body{
         right: -30px;
         
     }
+}
+
+footer p{
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
 }
