@@ -210,7 +210,7 @@ header{
     color: #fff;
 }
 .intro-text h2{
-    font-size: 46px;
+    font-size: 56px;
     margin-top: 20px;
     color: #ffc400;
     animation: glowTextRed 1s linear infinite;
@@ -429,7 +429,6 @@ header{
     max-width: 340px;
     width: 90%;
     backdrop-filter: blur(10px);
-    box-shadow: 2px 9px 20px 10px rgb(44 44 44 / 86%);
 }
 
 .steps-box > div{
@@ -707,7 +706,7 @@ header{
         font-size: 5vw;
     }
     .intro-text h2{
-        font-size: 9vw;
+        font-size: 11vw;
     }
     .rewards {
         flex-wrap: wrap;
@@ -717,6 +716,7 @@ header{
     }
     .stepTitle{
         font-size: 6vw;
+        margin-bottom: 213px;
     }
 }
 
@@ -775,7 +775,7 @@ header{
         font-size: 16px;
     }
     .steps-container{
-        gap: 40px;
+        gap: 20px;
     }
 
 }

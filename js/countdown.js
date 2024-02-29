@@ -9,18 +9,19 @@
     let today = new Date(),
         dd = String(today.getDate()).padStart(2, "0"),
         mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
+        yyyy = 2024,
         nextYear = yyyy + 1,
-        dayMonth = "03/15/",
-        birthday = dayMonth + yyyy;
+        time = "23:59:59";
+        dayMonth = "03/14/",
+            targetDate = dayMonth + yyyy +" "+time ;
     
     today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      birthday = dayMonth + nextYear;
-    }
+    // if (today > birthday) {
+    //   birthday = dayMonth + nextYear;
+    // }
     //end
     
-    const countDown = new Date(birthday).getTime(),
+    const countDown = new Date(targetDate).getTime(),
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
@@ -33,11 +34,12 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
-            document.getElementById("countdown").style.display = "none";
-            document.getElementById("content").style.display = "block";
-            clearInterval(x);
-          }
+            document.getElementById("days").innerText = "0",
+                   document.getElementById("hours").innerText = "00",
+                   document.getElementById("minutes").innerText = "00",
+                   document.getElementById("seconds").innerText = "00";
+             clearInterval(x);
+           }
           //seconds
         }, 0)
     }());
