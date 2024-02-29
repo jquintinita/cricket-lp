@@ -18,7 +18,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 999999;
     width: 100%;
     padding: 10px 20px;
     transition: all 200ms linear;
@@ -213,8 +213,12 @@ header{
     font-size: 46px;
     margin-top: 20px;
 }
-
-
+.intro-text h3{
+    font-size: 32px;
+}
+.intro-text p{
+    font-size: 26px;
+}
 
 
 .rewards{
@@ -294,7 +298,7 @@ header{
         height: auto;
     }
     .hero-text{
-        bottom: -28%;
+        bottom: -22%;
         display: flex;
         flex-direction: column;
     }
@@ -401,7 +405,7 @@ header{
     background-image: -moz-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
     background-image: -webkit-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
     background-image: -ms-linear-gradient( -90deg, rgba(51,124,88, 0.7) 0%, rgba(84,199,114,0.7) 100%);
-    padding: 30px 30px 30px 60px;
+    padding: 15px 30px 15px 60px;
     color:#fff;
     transform: skew(-15deg);
     position: relative;
@@ -449,7 +453,7 @@ header{
 .form-reg{
     color: #fff;
     max-width: 400px;
-    margin: 50px auto 0;
+    margin: 40px auto 0;
 }
 
 .form-input{
@@ -469,6 +473,7 @@ header{
      outline: none;
      font-size: 18px;
      width: 100%;
+     border-radius: 4px;
 }
 .form-input input::placeholder{
     color: #fff;
@@ -479,6 +484,7 @@ header{
     background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,113,95,1) 88%, rgba(255,0,0,1) 89%, rgba(181,0,0,1) 100%);    padding: 15px 30px;
     transition: all 200ms ease;
     cursor: pointer;
+    border-radius: 5px;
 }
 .form-input input[type="submit"]:hover{
     background-color: #fff;
@@ -500,11 +506,61 @@ header{
     right: -60px;
     top: 50%;
 }
+.termsInfo{
+    display: block;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.termsInfo:hover{
+    color: yellow;
+}
+.termsInfo::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/information-button.png);
+    background-size: contain;
+    display: inline-block;
+}
+.social-sec{
+    padding: 20px 0 0;
+}
+.social-sec h2{
+    color: #fff;
+    text-align: center;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.social-media a{
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+.social-media img{
+    max-width: 60px;
+}
+
+.social-media a:hover{
+    transform: scale(1.05);
+}
+
 @media screen and (max-width: 1024px) {
      .prizes-sec{
        
-        padding-top: 160px;
-        margin-top: 300px;
+        padding-top: 80px;
+        padding-bottom: 120px;
+        margin-top: 0;
    }
    .flex-box {
     position: relative;
@@ -539,6 +595,17 @@ header{
         border: 1px solid  rgb(6, 255, 0);
     }
 }
+@media only screen and (max-width: 980px){
+    .cricket-ball{
+        width: 11vw;
+    }
+    .cash-flying1{
+        width: 13vw;
+    }
+    .cash-flying2{
+        width: 15vw;
+    }
+}
 @media screen and (max-width: 768px) {
     .reg-sec {
       
@@ -547,10 +614,32 @@ header{
         background-size: 300%;
     }
     .prizes-sec {
-        padding-top: 160px;
-        margin-top: 60%;
+        padding-top: 90px;
+        margin-top: 5%;
     }
-
+    .intro-text h3{
+        font-size: 4vw;
+    }
+    .intro-text h2{
+        font-size: 6vw;
+    }
+    .rewards {
+        flex-wrap: wrap;
+    }
+    
+    .rewards img:first-child, .rewards img:last-child{
+         margin-top: 0;
+         order: 4;
+        width: 26vw;
+    }
+    .rewards img:nth-child(2), .rewards img:nth-child(4){
+        margin-top: 6%;
+        width: 26vw;
+    }
+    .rewards img:nth-child(3){
+        margin-top: -6%;
+        width: 28vw;
+    }
 }
 @media screen and (max-width: 668px) {
    
@@ -576,6 +665,22 @@ header{
     }
     .steps-box{
         margin-left: unset !important;
+    }
+    .prizes-sec {
+        padding-top: 60px;
+        margin-top: 5%;
+    }
+    .intro-text h3{
+        font-size: 5vw;
+    }
+    .intro-text h2{
+        font-size: 7vw;
+    }
+    .rewards {
+        flex-wrap: wrap;
+    }
+    .hero-text{
+        bottom: -45%;
     }
 }
 
@@ -659,15 +764,17 @@ footer p{
 }
 
 .popup-modal{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9999999999;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
 }
 
 .popup-box{
@@ -677,19 +784,42 @@ footer p{
     min-height: 240px;
     border-radius: 15px;
     position: relative;
-    box-shadow: 1px 20px;
+    padding-top: 40px;
+
+    box-shadow: 0px 11px 15px 6px rgba(0,0,0,0.6);
 }
+.popup-box h2{
+    margin-bottom: 20px ;
+}
+.popup-box p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
 .popup-box .popup-close{
     position: absolute;
-    right: 0;
+    right: 10px;
+    top: 10px;
     border: 1px solid #fff;
     background-color: #000;
     width: 30px;
     color: #fff;
     height: 30px;
     border-radius: 50%;
+    cursor: pointer;
 }
+.popup-box .popup-close:hover{
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+#termsPopup > .popup-box{
+    max-width: 600px;
+    width: 90%;
+    display: block;
 
+}
 .check-icon{
     max-width: 100px;
     display: block;

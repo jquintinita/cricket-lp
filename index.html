@@ -26,9 +26,9 @@
     <section class="prizes-sec">
         <div class="container">
             <div class="intro-text">
-                <img src="images/pbc-logo.png"/>
+                <h3>PCB88.com</h3>
                 <h2>GRAND OPENING</h2>
-                <p>2024.03.14</p>
+                <h3>March 14, 2024</h3>
             </div>
             <div id="countdown">
                 <ul>
@@ -39,8 +39,8 @@
                 </ul>
               </div>
             <div class="rewards">
-                <img src="images/Trip to Japan.png?v=1.2"/>
-                <img src="images/Yamaha FZS V3 ABS.png"/>
+                <img src="images/Trip-to-Japan.png"/>
+                <img src="images/Yamaha-FZS-V3-ABS.png"/>
                 <img src="images/Toyota-Premio.gif?v=1.2" style="animation: beat 0.8s linear infinite alternate"/>
                 <img src="images/Iphone.png?v=1.2"/>
                 <img src="images/PSP.png?v=1.2"/>
@@ -72,6 +72,7 @@
                         </div>
                     </div>
                     <div class="form-reg" id="register" style="scroll-margin-top: 7em;">
+                        <button class="termsInfo">Terms and Condition</button>
                         <form id="regForm">
                             <h2 class="title-head">Registration</h2>
                             <div class="form-input"  >
@@ -86,6 +87,16 @@
             </div>
         </div>
     </section>
+    <section class="social-sec">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <div class="social-media">
+                <a href="" target="_blank"><img src="images/002-telegram.png" /></a>
+                <a href="" target="_blank"><img src="images/003-facebook.png" /></a>
+                <a href="" target="_blank"><img src="images/004-instagram-1.png" /></a>
+            </div>
+        </div>
+    </section>
     <section class="video-sec">
         <div class="container">
             <h2 class="video-title">Promotion video</h2>
@@ -95,17 +106,31 @@
         </div>
     </section>
     <footer>
-        <p>Copyright © 2023 PBC88.com All Rights Reserved.</p>
+        <p>Copyright © 2024 PBC88.com All Rights Reserved.</p>
     </footer>
-    <!-- <div class="popup-modal" id="succesfullMsg">
+    <div class="popup-modal" id="succesfullMsg">
        <div class="popup-box">
             <button class="popup-close">x</button>
             <div class="popup-wrapper">
                 <img src="images/check-icon.png" class="check-icon"/>
-                <span class="successMsg">Submission is successfully recorded</span>
+                <div style="text-align: center;">
+                    <h2>Thank you!</h2>
+                <p class="successMsg">Your submission has been received. <br/>
+                We will contact you soon via sms.</p>
+                </div>
             </div>
        </div>
-    </div> -->
+    </div>
+    <div class="popup-modal" id="termsPopup">
+       <div class="popup-box">
+            <button class="popup-close">x</button>
+            <div class="popup-wrapper">
+                <h2>Terms and Condition</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet ex nunc. Nunc at efficitur elit. Donec nec iaculis enim. Aliquam nibh lectus, hendrerit ut posuere quis, euismod et nunc. Sed accumsan diam ut erat lacinia, in eleifend augue ultricies. Maecenas dignissim a nibh at tempus. Fusce vulputate accumsan massa, nec auctor massa luctus eget. Nam mattis feugiat metus sed porttitor. Integer sed mollis tellus. Sed euismod tempus ligula. Vivamus rutrum lorem felis, at tempor ante iaculis eget. Morbi urna mi, congue a eros vel, porta fringilla tellus. Nam laoreet sed felis ut accumsan.</p>
+                <p>Maecenas non orci vel orci maximus aliquam ac quis sem. Mauris vel eros convallis, mollis ipsum ac, gravida nibh. Duis sodales maximus sollicitudin. In porttitor faucibus elit, at blandit odio ultricies quis. Pellentesque scelerisque ante ac erat consectetur, in tincidunt erat vulputate. Duis sit amet fermentum felis. Sed nulla ante, faucibus nec tempus eu, feugiat non justo. Mauris urna nibh, ultrices vitae est eu, laoreet iaculis nulla. Praesent augue eros, scelerisque id dignissim in, lobortis sed mauris. Fusce risus dolor, ullamcorper sit amet lorem quis, lacinia mollis dui. Nam enim quam, viverra quis libero at, elementum laoreet nisi. Proin sit amet neque leo. Nunc id sem turpis.</p>
+            </div>
+       </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="js/countdown.js"></script>
     <script>
@@ -118,7 +143,12 @@
                     $('header').removeClass('fixed-header');
                 }
             });
-
+            $(".termsInfo").click(function(){
+                    $("#termsPopup").show().css("display", "flex");
+                    $("#termsPopup .popup-close").click(function(){
+                        $("#termsPopup").hide()
+                    })
+            });
             $(".btn-register").click(function() {
                 $('html, body').animate({
                     scrollTop: $("#register").offset().top - 200
@@ -127,16 +157,20 @@
 
            $("#submitReg").click(function(event){
             event.preventDefault();
-                $.ajax({
-                    method: "post",
-                    url: "reg.php",
-                    data: $('#regForm').serialize(),
-                    dataType: "text",
-                    success: function(response){
-                        alert(response);
-                        resetform();
-                    }
-                });
+                $("#succesfullMsg").show().css("display", "flex");
+                $("#succesfullMsg .popup-close").click(function(){
+                    $("#succesfullMsg").hide()
+                })
+                // $.ajax({
+                //     method: "post",
+                //     url: "reg.php",
+                //     data: $('#regForm').serialize(),
+                //     dataType: "text",
+                //     success: function(response){
+                //         alert(response);
+                //         resetform();
+                //     }
+                // });
            });
            function resetform(){
              $("#phone").val("");
