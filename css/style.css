@@ -284,6 +284,9 @@ header{
 
 
 @media screen and (max-width: 980px) {
+    .intro-text img{
+        display: none;
+    }
     .hero-text{
         bottom: -30%;
     }
@@ -301,7 +304,7 @@ header{
         height: auto;
     }
     .hero-text{
-        bottom: -22%;
+        bottom: -30%;
         display: flex;
         flex-direction: column;
     }
@@ -406,6 +409,11 @@ header{
     max-width: 600px;
     font-size: 32px;
     margin-bottom: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .steps-box{
     border-style: solid;
@@ -565,11 +573,15 @@ header{
 }
 
 @media screen and (max-width: 1024px) {
+    .stepTitle{
+        margin-bottom: 250px;
+    }
      .prizes-sec{
        
         padding-top: 80px;
-        padding-bottom: 120px;
+        padding-bottom: 0px;
         margin-top: 0;
+        margin-bottom: 30px;
    }
    .flex-box {
     position: relative;
@@ -623,7 +635,7 @@ header{
         background-size: 300%;
     }
     .prizes-sec {
-        padding-top: 90px;
+        padding-top: 20px;
         margin-top: 5%;
     }
     .intro-text h3{
@@ -635,6 +647,7 @@ header{
     .rewards {
         flex-wrap: wrap;
     }
+   
     
     .rewards img:first-child, .rewards img:last-child{
          margin-top: 0;
@@ -649,6 +662,9 @@ header{
         margin-top: -6%;
         width: 28vw;
     }
+    .stepTitle{
+        margin-bottom: 229px;
+    }
 }
 @media screen and (max-width: 668px) {
    
@@ -661,6 +677,14 @@ header{
     }
     .steps-box{
         margin-left: unset !important;
+    }
+    .stepTitle{
+        font-size: 28px;
+        padding: 0 30px;
+        margin-bottom: 250px;
+    }
+    .intro-text h2 {
+        font-size: 9vw;
     }
 }
 @media screen and (max-width: 468px) {
@@ -676,20 +700,23 @@ header{
         margin-left: unset !important;
     }
     .prizes-sec {
-        padding-top: 60px;
+        padding-top: 55px;
         margin-top: 5%;
     }
     .intro-text h3{
         font-size: 5vw;
     }
     .intro-text h2{
-        font-size: 7vw;
+        font-size: 9vw;
     }
     .rewards {
         flex-wrap: wrap;
     }
     .hero-text{
         bottom: -45%;
+    }
+    .stepTitle{
+        font-size: 6vw;
     }
 }
 
@@ -766,7 +793,7 @@ header{
 }
 
 footer p{
-    padding: 10px 0;
+    padding: 10px 20px;
     text-align: center;
     color: #fff;
     font-size: 16px;
