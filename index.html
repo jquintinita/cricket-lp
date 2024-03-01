@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PBC88 Cricket </title>
-    <link href="css/style.css?v=1.5" rel="stylesheet" type="text/css"/>
+    <title>PBC88 2024 | Play Bet Cricket </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Register now and win big with our exclusive promotion! Get 500 bonus points when you sign up in advance. Don't miss out on this fantastic opportunity!" />
+    <meta name="keyword" content="Casino, Sports Betting, Cricket Betting site, Online Casino, Online Sports, Online Cricket"/>
+    <meta property="og:title" content="PBC88 2024 | Play Bet Cricket " />
+    	<meta property="og:image" content="https://www.kennedyvision.com/wp-content/uploads/2022/11/kennedy-vision-health-center-fb-sm.jpg" />
+	<meta property="og:description" content="Register now and win big with our exclusive promotion! Get 500 bonus points when you sign up in advance. Don't miss out on this fantastic opportunity!" />
+    <meta property="og:image" content="https://pbc2024.com/images/pbc-2024.ong" />
+	<meta property="og:url" content="https://pbc2024.com" />
+	<meta property="og:site_name" content="PBC88 Play Bet Cricket" />
+    <link href="css/style.css?v=1.9" rel="stylesheet" type="text/css"/>
 </head>
 <body>
    <header>
@@ -107,7 +116,11 @@
         <div class="container">
             <h2 class="video-title">প্রচারমূলক ভিডিও </h2>
             <div class="video-container">
-                <iframe width="100%" height="415" src="https://www.youtube.com/embed/X0neGlEYL2s?si=W81c5HAd5as3pbHq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <video controls width="100%" height="420px" poster="images/video-poster.jpg">
+                    <source src="images/PBC88 - cricket final v5.mp4"
+                            type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
             </div>
         </div>
     </section>
@@ -166,20 +179,21 @@
 
            $("#submitReg").click(function(event){
             event.preventDefault();
-                $("#succesfullMsg").show().css("display", "flex");
-                $("#succesfullMsg .popup-close").click(function(){
-                    $("#succesfullMsg").hide()
-                })
-                // $.ajax({
-                //     method: "post",
-                //     url: "reg.php",
-                //     data: $('#regForm').serialize(),
-                //     dataType: "text",
-                //     success: function(response){
-                //         alert(response);
-                //         resetform();
-                //     }
-                // });
+                
+                 $.ajax({
+                    method: "post",
+                    url: "reg.php",
+                    data: $('#regForm').serialize(),
+                    dataType: "text",
+                    success: function(response){
+                        // alert(response);
+                        $("#succesfullMsg").show().css("display", "flex");
+                        $("#succesfullMsg .popup-close").click(function(){
+                            $("#succesfullMsg").hide()
+                        })
+                        resetform();
+                    }
+                 });
            });
            function resetform(){
              $("#phone").val("");

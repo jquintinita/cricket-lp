@@ -778,8 +778,10 @@ header{
         gap: 20px;
     }
 
+.video-container video {
+    height: auto;
 }
-
+}
 @media screen and (max-width:320px) {
     .video-title::before{
         width: 20px;
