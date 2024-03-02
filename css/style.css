@@ -210,10 +210,10 @@ header{
     color: #fff;
 }
 .intro-text h2{
-    font-size: 56px;
+    font-size: 46px;
     margin-top: 20px;
     color: #ffc400;
-    animation: glowTextRed 1s linear infinite;
+   /* // animation: glowTextRed 1s linear infinite; */
     text-shadow: 0px 0px 5px #ff0000, 0px 0px 5px rgba(255, 0, 0, 0.822);
 }
 .intro-text h3{
@@ -868,4 +868,48 @@ footer p{
     max-width: 100px;
     display: block;
     margin: 0 auto 20px;
+}
+.error{
+    font-size: 14px;
+    color: #ff0000;
+    padding: 5px;
+}
+.form-input input.err{
+    border-color:  #ff0000 !important;
+    background-color: #ff000074;
+}
+.form-input input.err:focus{
+    border-color: rgb(6, 255, 0) !important;
+    background-color: rgb(41, 99, 61);
+}
+
+.rewards-Title{
+    font-size: 56px;
+    color: #ffc400;
+    animation: glowbeat 1s linear infinite;
+    text-shadow: 0px 0px 5px #ff0000, 0px 0px 5px rgba(255, 0, 0, 0.822);
+    text-align: center;
+    margin-top: -40px;
+}
+.rewards-Title img{
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+}
+
+
+
+@keyframes glowbeat {
+    0% {
+        transform: scale(1);
+       
+    }
+    20%, 60% {
+        transform: scale(1.08);
+       
+    }
+    100% {
+        transform: scale(1);
+      
+    }
 }

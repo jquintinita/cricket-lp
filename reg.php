@@ -13,15 +13,15 @@ if (mysqli_connect_errno()) {
 }
 
 
-$fname = $_POST["fullname"];
+$uname = $_POST["username"];
 $phone = $_POST["phone"];
 $email = $_POST["email"];
 
 
-$strSql = "INSERT INTO registerusers (fullName, phone, email) VALUES ('$fname', '$phone', '$email')";
+$strSql = "INSERT INTO registerusers (username, phone, email) VALUES ('$uname', '$phone', '$email')";
 
 if(mysqli_query($conn, $strSql)){
-    echo "Submission is successfully recorded";
+    echo "Success";
 }else{
     echo mysqli_error();
 }
