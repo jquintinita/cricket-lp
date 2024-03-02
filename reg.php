@@ -18,12 +18,21 @@ $phone = $_POST["phone"];
 $email = $_POST["email"];
 
 
-$strSql = "INSERT INTO registerusers (username, phone, email) VALUES ('$uname', '$phone', '$email')";
+$userExist = mysqli_query($conn,"SELECT username FROM registerusers Users WHERE username=$uname");
 
-if(mysqli_query($conn, $strSql)){
-    echo "Success";
-}else{
-    echo mysqli_error();
+if (mysqli_num_rows($query) != 0){
+
+
+    echo ("Username already exist!")
 }
+else{
 
+    $strSql = "INSERT INTO registerusers (username, phone, email) VALUES ('$uname', '$phone', '$email')";
+
+    if(mysqli_query($conn, $strSql)){
+        echo "Success";
+    }else{
+        echo mysqli_error();
+    }
+}
 ?>
